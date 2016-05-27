@@ -34,8 +34,8 @@ public class phantom {
                     ((DesiredCapabilities) caps).setCapability("takesScreenshot", true);  
                     ((DesiredCapabilities) caps).setCapability(
                             PhantomJSDriverService.PHANTOMJS_EXECUTABLE_PATH_PROPERTY,
-                           "C:/Program Files/phantomjs-2.1.1-windows/bin/phantomjs.exe"
-                           // "/home/ubuntu/phantomjs-2.1.1-linux-x86_64/bin/phantomjs"
+                           //"C:/Program Files/phantomjs-2.1.1-windows/bin/phantomjs.exe"
+                            "/home/ubuntu/phantomjs-2.1.1-linux-x86_64/bin/phantomjs"
                         );
         driver = new  PhantomJSDriver(caps);
         
