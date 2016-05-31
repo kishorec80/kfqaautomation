@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Sample Test Suite" verbose="1" >
+  <test name="Method Test Cases" >
+    <classes>
+       <class name="login.Loginpage" />
+       <class name="home.Homemainwindow" /> 
+      
+    </classes>
+  </test>
+</suite>
