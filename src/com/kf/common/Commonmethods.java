@@ -1,4 +1,4 @@
-package common;
+package com.kf.common;
 
 import java.io.File;
 import java.io.IOException;
@@ -9,7 +9,7 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.testng.annotations.Test;
 
-import login.Loginpage;
+import com.kf.login.Loginpage;
 
 public class Commonmethods {
 	

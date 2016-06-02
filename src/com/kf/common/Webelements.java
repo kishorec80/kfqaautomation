@@ -1,4 +1,4 @@
-package common;
+package com.kf.common;
 
 public class Webelements {
 

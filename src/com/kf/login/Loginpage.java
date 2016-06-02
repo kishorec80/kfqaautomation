@@ -1,4 +1,4 @@
-package login;
+package com.kf.login;
 
 import java.io.File;
 import java.io.IOException;
@@ -19,8 +19,8 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import common.Commonvariables;
-import common.Webelements;
+import com.kf.common.Commonvariables;
+import com.kf.common.Webelements;
 
 public class Loginpage {
 
@@ -35,9 +35,9 @@ public class Loginpage {
 			((DesiredCapabilities) caps).setCapability("takesScreenshot", true);
 			((DesiredCapabilities) caps).setCapability(
 					PhantomJSDriverService.PHANTOMJS_EXECUTABLE_PATH_PROPERTY,
-					//"C:/Program Files/phantomjs-2.1.1-windows/bin/phantomjs.exe"
+					"C:/Program Files/phantomjs-2.1.1-windows/bin/phantomjs.exe"
 			// "C:/Program Files/phantomjs-1.9.7-windows/bin/phantomjs.exe"
-			 "/home/ubuntu/phantomjs-2.1.1-linux-x86_64/bin/phantomjs"
+			 //"/home/ubuntu/phantomjs-2.1.1-linux-x86_64/bin/phantomjs"
 					);
 			driver = new PhantomJSDriver(caps);
 

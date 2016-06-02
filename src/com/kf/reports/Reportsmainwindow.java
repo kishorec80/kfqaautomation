@@ -1,4 +1,4 @@
-package reports;
+package com.kf.reports;
 
 public class Reportsmainwindow {
 	

@@ -1,4 +1,4 @@
-package home;
+package com.kf.home;
 
 
 
@@ -16,16 +16,18 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 
 
-import utility.Utility;
+
+
+
+import com.kf.common.Webelements;
+import com.kf.login.Loginpage;
+import com.kf.utility.Utility;
 
 //import com.relevantcodes.extentreports.ExtentReports;
 //import com.relevantcodes.extentreports.ExtentTest;
 //import com.relevantcodes.extentreports.LogStatus;
 
 //import common.Commonvariables;
-import common.Webelements;
-import login.Loginpage;
-//import common.Execute;
 
 
 public class Homemainwindow {
@@ -82,9 +84,9 @@ public class Homemainwindow {
 			Assert.assertEquals(actual,"1","Required the actualto be 1");
 			
 			
-			File scrFile9=((TakesScreenshot)Loginpage.driver).getScreenshotAs(OutputType.FILE);
+			/*File scrFile9=((TakesScreenshot)Loginpage.driver).getScreenshotAs(OutputType.FILE);
 			FileUtils.copyFile(scrFile9, new File("./draftcount.jpeg"),true);
-			
+			*/
 			
 		}
 		catch (Exception e){

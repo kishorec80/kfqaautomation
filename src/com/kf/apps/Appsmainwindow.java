@@ -1,6 +1,4 @@
-package apps;
-
-import login.Loginpage;
+package com.kf.apps;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -12,7 +10,8 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import common.*;
+import com.kf.common.*;
+import com.kf.login.Loginpage;
 
 public class Appsmainwindow {
 
