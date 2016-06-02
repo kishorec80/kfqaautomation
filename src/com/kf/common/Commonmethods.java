@@ -9,9 +9,9 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.testng.annotations.Test;
 
-import com.kf.login.Loginpage;
+import com.kf.login.LoginPage;
 
-public class Commonmethods {
+public class CommonMethods {
 	
 	@Test
 	public static void clickapps()

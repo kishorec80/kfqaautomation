@@ -1,6 +1,6 @@
 package com.kf.common;
 
-public class Commonvariables {
+public class CommonVariables {
 	
 	//Login page
 	public static final String chromedriverpath 	= "D:/Software/Eclpise64bit/updateddrivers/chromedriver_win32/";

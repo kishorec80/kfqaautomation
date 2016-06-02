@@ -1,6 +1,6 @@
 package com.kf.masters;
 
-public class Mastersmainwindow {
+public class MastersMainWindow {
 	
 
 }

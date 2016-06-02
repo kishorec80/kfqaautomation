@@ -11,17 +11,17 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import com.kf.common.*;
-import com.kf.login.Loginpage;
+import com.kf.login.LoginPage;
 
-public class Appsmainwindow {
+public class AppsMainWindow {
 
 	@BeforeClass
 	public static void closevideo() throws InterruptedException {
 		try {
-			Loginpage.driver.findElement(By.xpath(Webelements.appsxpath))
+			LoginPage.driver.findElement(By.xpath(Webelements.appsxpath))
 					.click();
 			Thread.sleep(5000);
-			Loginpage.driver.findElement(
+			LoginPage.driver.findElement(
 					By.xpath("//*[@id='introVideo']/div/div[1]/a")).click();
 		} catch (Exception e) {
 		}
@@ -31,40 +31,40 @@ public class Appsmainwindow {
 	@Test
 	public static void createapps() throws InterruptedException {
 		try {
-			Loginpage.driver.findElement(By.xpath(Webelements.appsxpath))
+			LoginPage.driver.findElement(By.xpath(Webelements.appsxpath))
 					.click();
 			Thread.sleep(5000);
-			Loginpage.driver.findElement(
+			LoginPage.driver.findElement(
 					By.xpath("//*[@id='introVideo']/div/div[1]/a")).click();
 			Thread.sleep(5000);
-			Loginpage.driver.findElement(By.xpath(Webelements.createappspath))
+			LoginPage.driver.findElement(By.xpath(Webelements.createappspath))
 					.click();
 			Thread.sleep(5000);
-			Loginpage.driver.switchTo().frame("wizard");
+			LoginPage.driver.switchTo().frame("wizard");
 			Thread.sleep(5000);
-			Loginpage.driver.findElement(By.xpath("//*[@id='sectionheading']"))
+			LoginPage.driver.findElement(By.xpath("//*[@id='sectionheading']"))
 					.sendKeys("one");
 			Thread.sleep(1000);
-			Loginpage.driver.findElement(By.id("shortDesc")).sendKeys(
+			LoginPage.driver.findElement(By.id("shortDesc")).sendKeys(
 					"for testing the app");
 			Thread.sleep(1000);
-			Loginpage.driver.findElement(
+			LoginPage.driver.findElement(
 					By.xpath("//*[@id='form']/div[3]/div[3]/a")).click();
 			Thread.sleep(1000);
-			WebElement webElement1 = Loginpage.driver.findElement(By
+			WebElement webElement1 = LoginPage.driver.findElement(By
 					.id("sectionheading"));
 			// Loginpage.driver.findElement(By.id("sectionheading")).clear();
 			// Loginpage.driver.findElement(By.id("sectionheading")).sendKeys("Emp Register");
 			webElement1.findElement(By.id("sectionheading")).clear();
-			Actions action = new Actions(Loginpage.driver);
+			Actions action = new Actions(LoginPage.driver);
 			action.moveToElement(
-					Loginpage.driver.findElement(By.id("sectionheading")))
+					LoginPage.driver.findElement(By.id("sectionheading")))
 					.doubleClick().perform();
 			webElement1.findElement(By.id("sectionheading")).sendKeys(
 					"Emp Register");
 
 			action.moveToElement(
-					Loginpage.driver.findElement(By
+					LoginPage.driver.findElement(By
 							.className("resizeMaterialInput"))).doubleClick()
 					.perform();
 
@@ -79,19 +79,19 @@ public class Appsmainwindow {
 	@Test
 	public static void installapps() throws InterruptedException {
 		try {
-			Loginpage.driver.findElement(By.xpath(Webelements.appsxpath))
+			LoginPage.driver.findElement(By.xpath(Webelements.appsxpath))
 					.click();
 			Thread.sleep(5000);
-			Loginpage.driver.findElement(
+			LoginPage.driver.findElement(
 					By.xpath("//*[@id='introVideo']/div/div[1]/a")).click();
 			Thread.sleep(3000);
-			Actions builder = new Actions(Loginpage.driver);
+			Actions builder = new Actions(LoginPage.driver);
 			builder.moveToElement(
-					Loginpage.driver.findElement(By
+					LoginPage.driver.findElement(By
 							.xpath("/html/body/div[3]/div[2]/div[1]/div/div/div[1]/div[1]/div/div[2]/div[2]/span")))
 					.perform();
 			Thread.sleep(5000);
-			Loginpage.driver
+			LoginPage.driver
 					.findElement(
 							By.xpath("/html/body/div[3]/div[2]/div[1]/div/div/div[1]/div[1]/div/div[2]/div[3]/button"))
 					.click();
@@ -109,37 +109,37 @@ public class Appsmainwindow {
 	public static void editapp() {
 		try {
 
-			Loginpage.driver.findElement(By.xpath(Webelements.appsxpath))
+			LoginPage.driver.findElement(By.xpath(Webelements.appsxpath))
 					.click();
 
 			Thread.sleep(2000);
-			Loginpage.driver.findElement(
+			LoginPage.driver.findElement(
 					By.xpath("//*[@id='app-search']/input")).sendKeys(
 					"Purchase Order 20");
 			Thread.sleep(3000);
 
-			Actions builder = new Actions(Loginpage.driver);
+			Actions builder = new Actions(LoginPage.driver);
 			builder.moveToElement(
-					Loginpage.driver.findElement(By
+					LoginPage.driver.findElement(By
 							.id("Foca94bd50_182e_11e6_a50a_22000ae43382")))
 					.perform();
 			Thread.sleep(5000);
-			Loginpage.driver
+			LoginPage.driver
 					.findElement(
 							By.xpath("//*[@id='Foca94bd50_182e_11e6_a50a_22000ae43382']/div[2]/div[2]/div/div[2]"))
 					.click();
 			Thread.sleep(5000);
-			Loginpage.driver
+			LoginPage.driver
 					.findElement(
 							By.xpath("//*[@id='Foca94bd50_182e_11e6_a50a_22000ae43382']/div[2]/div[2]/div/ul/li[3]/span[2]"))
 					.click();
 			Thread.sleep(3000);
-			Loginpage.driver
+			LoginPage.driver
 					.findElement(
 							By.xpath("//*[@id='liveApps']/div[1]/div/div[1]/div[2]/div[2]"))
 					.click();
 			Thread.sleep(1000);
-			Loginpage.driver.findElement(
+			LoginPage.driver.findElement(
 					By.xpath("//*[@id='app-search']/input")).clear();
 
 			// Working code for search and edit and delete

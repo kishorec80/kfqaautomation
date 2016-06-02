@@ -1,6 +1,6 @@
 package com.kf.reports;
 
-public class Reportsmainwindow {
+public class ReportsMainWindow {
 	
 	public static void reportscheck(){}
 
