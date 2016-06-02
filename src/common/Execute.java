@@ -44,7 +44,7 @@ public class Execute extends Loginpage {
 	{
 		try{
 			logger = report.startTest("Check for KF Login page");
-		Loginpage.login3();
+		Loginpage.login();
 		logger.log(LogStatus.INFO,"user logged in");
 		String actual =driver.getTitle();
 		Assert.assertEquals(actual, "google");

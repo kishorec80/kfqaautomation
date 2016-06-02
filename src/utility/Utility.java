@@ -27,6 +27,9 @@ FileUtils.copyFile(source, destination);
 
 System.out.println("Screenshot taken");
 return dest;
+
+
+
 } 	
 catch (Exception e)
 {

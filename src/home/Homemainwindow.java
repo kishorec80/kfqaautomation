@@ -3,13 +3,18 @@ package home;
 
 
 
+import java.io.File;
+
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
+
 
 import utility.Utility;
 
@@ -20,7 +25,7 @@ import utility.Utility;
 import common.Commonvariables;
 import common.Webelements;
 import login.Loginpage;
-//import common.Execute;
+import common.Execute;
 
 
 public class Homemainwindow {
@@ -75,6 +80,11 @@ public class Homemainwindow {
 			String actual=draftcount.getAttribute("innerText");
 			System.out.println("Now the count of the Draft is: "+actual);
 			Assert.assertEquals(actual,"1","Required the actualto be 1");
+			
+			
+			File scrFile9=((TakesScreenshot)Loginpage.driver).getScreenshotAs(OutputType.FILE);
+			FileUtils.copyFile(scrFile9, new File("./draftcount.jpeg"),true);
+			
 			
 		}
 		catch (Exception e){
@@ -293,6 +303,28 @@ public class Homemainwindow {
 		}
 	}
 	
+	@AfterMethod
+	public void getstatus(ITestResult result)throws Exception{
+	try{
+		if(result.getStatus() == ITestResult.SUCCESS)
+		{
+			//System.out.println("Test case Passed " + result.getStatus()  +result.getMethod().getMethodName());
+			System.out.println("Test case Passed "   + ":"+result.getMethod().getMethodName());
+		}
+		
+		if(result.getStatus() == ITestResult.FAILURE)
+		{
+			//System.out.println("Test case Failed " + result.getStatus()  +result.getMethod().getMethodName());
+			System.out.println("Test case Failed "   +":"+result.getMethod().getMethodName());
+			Utility.captureScreenshot(Loginpage.driver, result.getMethod().getMethodName());
+			
+			
+			
+		}
+		
+	}
+	catch (Exception e){}
+	}
 	
 	
 	

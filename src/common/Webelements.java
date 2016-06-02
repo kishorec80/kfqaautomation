@@ -10,6 +10,9 @@ public class Webelements {
 	public static final String appsxpath = "//*[@id='nav-mobile']/li[2]/a/span";
 	public static final String createappspath = "/html/body/div[3]/div[2]/div[1]/div/div[2]/div/div[1]/div/p";
 	public static final String nameoftheapppath = "//*[@id='form']/div[3]/div[3]/a";
+	public static final String avatar = "//*[@id='nav-mobile']/li[7]/a/i";
+	
+	
 	//For Reports
 	public static final String reportsxpath = "//*[@id='nav-mobile']/li[3]/a/span";
 	//For Admin
