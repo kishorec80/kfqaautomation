@@ -18,7 +18,7 @@ TakesScreenshot ts=(TakesScreenshot)driver;
 
 File source=ts.getScreenshotAs(OutputType.FILE);
 
-//FileUtils.copyFile(source, new File("./Screenshots/"+screenshotName+".png"));
+FileUtils.copyFile(source, new File("./Screenshots/"+screenshotName+".png"));
 //FileUtils.copyFile(source, new File("D:\\Software\\Eclpise64bit\\screenshot\\"+screenshotName+".png"));
 //FileUtils.copyFile(source, new File("D:\\Software\\Eclpise64bit\\screenshot\\login.png"));
 String dest = "D:/Software/Eclpise64bit/screenshot/"+screenshotName+".png";
