@@ -2,8 +2,8 @@
 <suite name="Sample Test Suite" verbose="1" >
   <test name="Method Test Cases" >
     <classes>
-       <class name="login.Loginpage" />
-       <class name="home.Homemainwindow" /> 
+       <class name="com.kf.login.LoginPage" />
+       <class name="com.kf.home.HomeMainWindow" /> 
       
     </classes>
   </test>
