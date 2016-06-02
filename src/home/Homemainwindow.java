@@ -22,10 +22,10 @@ import utility.Utility;
 //import com.relevantcodes.extentreports.ExtentTest;
 //import com.relevantcodes.extentreports.LogStatus;
 
-import common.Commonvariables;
+//import common.Commonvariables;
 import common.Webelements;
 import login.Loginpage;
-import common.Execute;
+//import common.Execute;
 
 
 public class Homemainwindow {
