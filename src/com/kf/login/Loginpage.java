@@ -19,7 +19,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import com.kf.common.CommonVariables;
+import com.kf.common.Commonvariables;
 import com.kf.common.Webelements;
 
 public class LoginPage {
@@ -49,7 +49,7 @@ public class LoginPage {
 			// driver = new ChromeDriver();
 			// driver = new InternetExplorerDriver();
 			// driver=new FirefoxDriver();
-			driver.get(CommonVariables.url);
+			driver.get(Commonvariables.url);
 			driver.manage().window().maximize();
 		} catch (Exception e) {
 			System.out.println("Exception :: " + e);
@@ -62,10 +62,10 @@ public class LoginPage {
 		try {
 
 			driver.findElement(By.id(Webelements.kfloginpage_usernameid))
-					.sendKeys(CommonVariables.username);
+					.sendKeys(Commonvariables.username);
 			Thread.sleep(300);
 			driver.findElement(By.id(Webelements.kfloginpage_passwordid))
-					.sendKeys(CommonVariables.password);
+					.sendKeys(Commonvariables.password);
 			Thread.sleep(300);
 			driver.findElement(By.id(Webelements.kfloginpage_loginxpath))
 					.submit();
@@ -76,7 +76,7 @@ public class LoginPage {
 					By.xpath("/html/body/ng-include[1]/div/div[1]/div/p"))
 					.getText();
 			System.out.println(loggedinuser);
-			Assert.assertEquals(CommonVariables.username, loggedinuser);
+			Assert.assertEquals(Commonvariables.username, loggedinuser);
 			driver.findElement(By.xpath(Webelements.avatar)).click();
 
 			File scrFile10 = ((TakesScreenshot) LoginPage.driver)
