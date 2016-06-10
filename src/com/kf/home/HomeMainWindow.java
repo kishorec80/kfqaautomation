@@ -30,37 +30,24 @@ import com.kf.utility.Utility;
 //import common.Commonvariables;
 
 
+/**
+ * @author kishore
+ * Entire class executes the full flow of the Process initiated and End
+ * Flow of the Execution Initiate->Input request->clarification->Input Request->Approval->Reject->Drafts->InputRequest->
+ * Approval at the end Approved,Used the Testing APP to execute the scripts
+ */
+
 public class HomeMainWindow {
-	
-	
-	
-	//Full code works fine for the Testing APP
-	//Initiate->Input request->clarification->Input Request->Approval->Reject->Drafts->InputRequest->Approval at the end Approved
+	/**
+	 * @author kishore
+	 *Test case talks about the Initiate the process the get the count of the draft and validate it 
+	 */
 	@Test(priority =0,alwaysRun=true)
 	public static void initiateapp()throws Exception{
 		try{
 			
 					
 			LoginPage.driver.findElement(By.xpath(Webelements.homepath)).click();
-			
-		/*	WebElement googleSearchBtn = Loginpage.driver.findElement(By.xpath("//*[@id='nav-mobile']/li[1]/a/span"));
-			System.out.println("Name of the button is:- " +googleSearchBtn.getAttribute("class"));
-			System.out.println("Name of the button is:- " +googleSearchBtn.getAttribute("innerText"));
-			
-			WebElement googleSearchBtn2 = Loginpage.driver.findElement(By.xpath("//*[@id='inbox-container']/ng-include[1]/div/div/section[2]/ul[1]/li[2]/a/span[1]/span"));
-			System.out.println("Name of the button is:- " +googleSearchBtn2.getAttribute("class"));
-			System.out.println("Name of the button is:- " +googleSearchBtn2.getAttribute("innerText"));
-			
-			
-			
-			WebElement googleSearchBtn4 = Loginpage.driver.findElement(By.xpath("//*[@id='inbox-container']/ng-include[1]/div/div/section[2]/ul[2]/li[4]/a/span[1]/span"));
-			System.out.println("Name of the button is:- " +googleSearchBtn4.getAttribute("class"));
-			System.out.println("Name of the button is:- " +googleSearchBtn4.getAttribute("innerText"));
-			*/
-			
-			
-			
-			
 			Thread.sleep(1000);
 			LoginPage.driver.findElement(By.xpath(Webelements.homemenuexpand)).click();
 			
@@ -94,6 +81,11 @@ public class HomeMainWindow {
 		}
 	}
 	
+	/**
+	 * @author kishore
+	 *Test case talks about giving the parameter to the Form and submit, it goes to the Input Request and check the count to 
+	 *validate it
+	 */
 	@Test(priority =1,alwaysRun=true)
 	public static void inputrequest()throws Exception{
 		try{
@@ -118,6 +110,13 @@ public class HomeMainWindow {
 			System.out.println( "Exception :: " +e);
 		}
 	}
+	
+	
+	/**
+	 * @author kishore
+	 *Test case talks  about the process from INPUT REQUEST to CLARIFICATIONS ,From the Input Request the form
+	 *will send to Clarification
+	 */
 	@Test(priority =2,alwaysRun=true)
 	public static void clarificationcount()throws Exception{
 		try{
@@ -141,6 +140,12 @@ public class HomeMainWindow {
 			System.out.println( "Exception :: " +e);
 		}
 	}
+	
+	/**
+	 * @author kishore
+	 *Test case talks  about the process from CLARIFICATIONS to INPUT REQUEST ,Once it is clarified
+	 *it will move to approval
+	 */
 	@Test(priority =3,alwaysRun=true)
 	public static void afterclarifications()throws Exception{
 		try{	
@@ -163,6 +168,12 @@ public class HomeMainWindow {
 			System.out.println( "Exception :: " +e);
 		}
 	}
+	
+	/**
+	 * @author kishore
+	 *Test case talks  about the process from INPUT REQUEST TO APPROVALS ,From the Input Request the form
+	 *will send to APPROVALS
+	 */
 	@Test(priority =4,alwaysRun=true)
 	public static void approvals()throws Exception{
 		try{
@@ -184,6 +195,12 @@ public class HomeMainWindow {
 			System.out.println( "Exception :: " +e);
 		}
 	}
+	
+	/**
+	 * @author kishore
+	 *Test case talks  about the process from APPROVALS TO REJECTED ,here the form will be rejected from the approvals
+	 *to rejected
+	 */
 	@Test(priority =5,alwaysRun=true)
 	public static void rejected()throws Exception{
 		try{
@@ -207,6 +224,11 @@ public class HomeMainWindow {
 		}
 	}
 	
+	
+	/**
+	 * @author kishore
+	 *Test case talks  about the process from  REJECTED to APPROVALS ,here the form will be restarted from the REJECTED
+	 */
 	@Test(priority =6,alwaysRun=true)
 	public static void Afterrejectdraftcount()throws Exception{
 		try{
@@ -225,6 +247,11 @@ public class HomeMainWindow {
 		}
 	}
 	
+	
+	/**
+	 * @author kishore
+	 *Test case talks  about the process from  second time INPUTREQUEST to APPROVALS.
+	 */
 	@Test(priority =7,alwaysRun=true)
 	public static void secondruntoinputcount()throws Exception{
 		try{
@@ -246,6 +273,10 @@ public class HomeMainWindow {
 			System.out.println( "Exception :: " +e);
 		}
 	}
+	/**
+	 * @author kishore
+	 *Test case talks  about the process from  second time INPUTREQUEST to APPROVALS.
+	 */
 	
 	@Test(priority =8,alwaysRun=true)
 	public static void secondruntoapprovals()throws Exception{
@@ -268,7 +299,11 @@ public class HomeMainWindow {
 			System.out.println( "Exception :: " +e);
 		}
 	}
-	
+	/**
+	 * @author kishore
+	 *Test case talks  about the process FROM  APPROVALS to APPROVED
+	 *final count is measured for the validation
+	 */
 
 	@Test(priority =9,alwaysRun=true)
 	public static void approved()throws Exception{

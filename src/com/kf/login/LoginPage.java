@@ -22,6 +22,12 @@ import org.testng.annotations.Test;
 import com.kf.common.CommonVariables;
 import com.kf.common.Webelements;
 
+/**
+ * @author kishore
+ *Test case talks about the setting up the enviorment which browser you want to run 
+ *[Chrome,IE,FF and Headless browser Phatom JS]
+ */
+
 public class LoginPage {
 
 	public static WebDriver driver;
@@ -35,18 +41,16 @@ public class LoginPage {
 			((DesiredCapabilities) caps).setCapability("takesScreenshot", true);
 			((DesiredCapabilities) caps).setCapability(
 					PhantomJSDriverService.PHANTOMJS_EXECUTABLE_PATH_PROPERTY,
-					//"C:/Program Files/phantomjs-2.1.1-windows/bin/phantomjs.exe"
-			// "C:/Program Files/phantomjs-1.9.7-windows/bin/phantomjs.exe"
-			 "/home/ubuntu/phantomjs-2.1.1-linux-x86_64/bin/phantomjs"
-					);
+					"C:/Program Files/phantomjs-2.1.1-windows/bin/phantomjs.exe"
+			
+			// "/home/ubuntu/phantomjs-2.1.1-linux-x86_64/bin/phantomjs"
+				);
 			driver = new PhantomJSDriver(caps);
 
-			// System.setProperty("webdriver.chrome.driver",
-			// Commonvariables.chromedriverpath + "chromedriver.exe");
-			// System.setProperty("webdriver.ie.driver",
-			// Commonvariables.iedriverpath+"IEDriverServer.exe");
+			 System.setProperty("webdriver.chrome.driver",CommonVariables.chromedriverpath + "chromedriver.exe");
+			 //System.setProperty("webdriver.ie.driver", Commonvariables.iedriverpath+"IEDriverServer.exe");
 
-			// driver = new ChromeDriver();
+			 //driver = new ChromeDriver();
 			// driver = new InternetExplorerDriver();
 			// driver=new FirefoxDriver();
 			driver.get(CommonVariables.url);
@@ -57,6 +61,11 @@ public class LoginPage {
 
 	}
 
+	/**
+	 * @author kishore,Test case talks about the Login into the KISS flow page .Used the beta Enviorment with 
+	 * Respect to that provided the user name and password for Testing
+	 *
+	 */
 	@Test
 	public static void login() throws Exception {
 		try {

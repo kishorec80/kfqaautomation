@@ -1,5 +1,9 @@
 package com.kf.common;
 
+/**
+ * @author kishore
+ *it has all the WebElements for the entire pages of the prodcut
+ */
 public class Webelements {
 
 	// Login Page Web Elements

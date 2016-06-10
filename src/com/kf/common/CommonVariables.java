@@ -1,5 +1,9 @@
 package com.kf.common;
 
+/**
+ * @author kishore
+ *This class files has the common variables which are used in the entire product
+ */
 public class CommonVariables {
 	
 	//Login page
